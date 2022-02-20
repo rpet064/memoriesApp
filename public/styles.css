@@ -1,0 +1,143 @@
+@import "bootstrap/dist/css/bootstrap.css";
+@import "react-image-gallery/styles/css/image-gallery.css";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: "Montserrat", sans-serif;
+}
+body {
+  background: #eee;
+  padding: 0 16px;
+  text-align: center;
+}
+
+/* bootstrap buttons */
+
+.btn-lg {
+  display: block;
+  margin: 1% auto 1% auto;
+}
+
+.btn-sm {
+  display: block;
+  margin: 1% auto 1% auto;
+}
+
+/* navbar */
+
+.nav {
+  background-color: #fa26a0;
+  margin: auto -16px;
+  padding: 16px 32px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+#nav-button {
+  color: white;
+  white-space: nowrap;
+  text-align: center;
+  margin: 0 3% 0 4%;
+  background: none;
+  border: none;
+}
+
+#brandButton {
+  background-color: #fa26a0;
+  border: none;
+}
+
+#brandButton:hover {
+  color: #fff;
+  background-color: #e12290;
+}
+
+/* Menu */
+
+.header {
+  padding-top: 4%;
+}
+
+.header h3 {
+  padding-top: 1%;
+  padding-bottom: 1%;
+  color: #ccc;
+}
+
+/* to do list */
+
+#toDoList {
+  background: #f1f5f8;
+  background-size: 25px 25px;
+  border-radius: 20px;
+  box-shadow: 4px 3px 7px 2px #00000040;
+  margin: 2% 10% 2% 10%;
+  box-sizing: border-box;
+}
+
+.form input {
+  box-sizing: border-box;
+  background-color: transparent;
+  padding: 1rem;
+  border: solid 3px transparent;
+  border-bottom: dashed 3px #fdcb6e;
+  font-size: 1.25rem;
+  color: hsla(260, 2%, 25%, 0.7);
+  width: 70%;
+  margin-bottom: 1%;
+}
+
+ul {
+  text-align: left;
+  position: relative;
+  padding: 1rem 0.5rem 1rem 5%;
+  margin: 0.5% 1% 0.5% 10%;
+}
+
+/* to do list buttons */
+
+#toDoButton {
+  position: relative;
+  top: 0.5rem;
+  padding: 0;
+  border: none;
+  text-decoration: none;
+  padding-bottom: 3px;
+  border-radius: 5px;
+  margin: 2% 2% 2% 2%;
+}
+
+#toDoButton span {
+  background: #f1f5f8;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  border: 2px solid hsl(198, 1%, 29%);
+  color: #fff;
+  background-color: #dc3545;
+  border-color: #dc3545;
+}
+
+#toDoButton span:hover {
+  color: #fff;
+  background-color: #bb2d3b;
+  border-color: #b02a37;
+}
+
+/* footer */
+
+footer {
+  position: fixed;
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
+  background-color: #ee91bc;
+}
+
+footer p {
+  color: #ccc;
+}
