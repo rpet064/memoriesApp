@@ -6,9 +6,8 @@ import CreateArea from "../reminders/CreateArea";
 import HandleNote from "../reminders/HandleNote";
 import Images from  './Images'
 
-// import { getImages, searchImages } from '../api/api';
-
 let specialOccassion = isSpecialOccassion;
+const n = 25;
 
 export default function Modals(props) {
   const [show, setShow] = useState(false);
@@ -93,7 +92,10 @@ export default function Modals(props) {
           </Modal.Footer>
         </Modal>
       </div>
-      {imageGallery && <Images url="https://weddingphotosapp.s3.amazonaws.com/2.jpg" />}
+      {/* show array of images  */}
+      {imageGallery && [...Array(n)].map((e, i) => <Images className ="Images" url={`https://weddingphotosapp.s3.amazonaws.com/${i+1}.jpg`} key={i} />)
+      }
+      {/* show notes */}
         {note && 
           <div>
             <CreateArea onAdd={addNote} />
