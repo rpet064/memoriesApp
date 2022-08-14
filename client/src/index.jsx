@@ -1,7 +1,7 @@
-import { render } from "react-dom";
+import * as ReactDOM from 'react-dom';
+import App from './App';
 
+const root = ReactDOM.createRoot(document.getElementById('root'));
 
-import App from "./App";
-
-const rootElement = document.getElementById("root");
-render(<App />, rootElement);
+root.render(<App tab="home" />);
+root.render(<App tab="profile" />);

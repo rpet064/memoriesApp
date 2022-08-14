@@ -64,14 +64,14 @@ export default function Modals(props) {
             size="lg"
             onClick={() => handleStateChange("imageGallery")}
           >
-            <FontAwesomeIcon icon="fa-solid faNotdef" />
+            <FontAwesomeIcon icon="fa-solid fa-photo-film" />
           </Button>
           <Button
             variant="danger"
             size="lg"
             onClick={() => handleStateChange("wishList")}
           >
-            <FontAwesomeIcon icon="fa-solid fa-photo-film" />
+            <FontAwesomeIcon icon="fa-solid fa-note-sticky" />
           </Button>
             </div>
               </Nav>
