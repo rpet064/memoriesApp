@@ -4,7 +4,7 @@ import occassion from "./occassionData";
 import { isSpecialOccassion, x } from "./isSpecialOccassion";
 import CreateArea from "../reminders/CreateArea";
 import HandleNote from "../reminders/HandleNote";
-import ImageGallery from  './ImageGallery'
+import Images from  './Images'
 
 // import { getImages, searchImages } from '../api/api';
 
@@ -93,6 +93,7 @@ export default function Modals(props) {
           </Modal.Footer>
         </Modal>
       </div>
+      {imageGallery && <Images />}
         {note && 
           <div>
             <CreateArea onAdd={addNote} />
@@ -107,7 +108,6 @@ export default function Modals(props) {
                 />
                 )})}
           </ div>}
-        {imageGallery && <ImageGallery />}
     </div>
   )
 }
