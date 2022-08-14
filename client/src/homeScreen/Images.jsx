@@ -1,7 +1,8 @@
-export default function Images(){
+export default function Images(props){
   return(
     <div>
-      <h1>Images are here</h1>
+      <img src={props.url} alt=""></img>
    </div>
   )
 }
+

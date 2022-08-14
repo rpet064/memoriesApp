@@ -93,7 +93,7 @@ export default function Modals(props) {
           </Modal.Footer>
         </Modal>
       </div>
-      {imageGallery && <Images />}
+      {imageGallery && <Images url="https://weddingphotosapp.s3.amazonaws.com/2.jpg" />}
         {note && 
           <div>
             <CreateArea onAdd={addNote} />
