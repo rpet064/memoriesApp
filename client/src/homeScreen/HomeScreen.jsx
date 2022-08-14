@@ -4,6 +4,7 @@ import occassion from "./occassionData";
 import { isSpecialOccassion, x } from "./isSpecialOccassion";
 import CreateArea from "../reminders/CreateArea";
 import HandleNote from "../reminders/HandleNote";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 let specialOccassion = isSpecialOccassion;
 const n = 25;
@@ -63,14 +64,14 @@ export default function Modals(props) {
             size="lg"
             onClick={() => handleStateChange("imageGallery")}
           >
-            Memories
+            <FontAwesomeIcon icon="fa-solid faNotdef" />
           </Button>
           <Button
             variant="danger"
             size="lg"
             onClick={() => handleStateChange("wishList")}
           >
-            Wish List
+            <FontAwesomeIcon icon="fa-solid fa-photo-film" />
           </Button>
             </div>
               </Nav>
