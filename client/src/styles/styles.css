@@ -97,6 +97,15 @@ ul {
   margin: 0.5% 1% 0.5% 10%;
 }
 
+/* imageGallery */
+
+.image-gallery {
+  width: 27rem;
+  height: 24rem;
+  display: inline-block;
+  padding: 0.4% 0.25% 0% 0.25%;
+}
+
 /* to do list buttons */
 
 #toDoButton {

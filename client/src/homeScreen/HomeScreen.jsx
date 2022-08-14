@@ -4,7 +4,6 @@ import occassion from "./occassionData";
 import { isSpecialOccassion, x } from "./isSpecialOccassion";
 import CreateArea from "../reminders/CreateArea";
 import HandleNote from "../reminders/HandleNote";
-import Images from  './Images'
 
 let specialOccassion = isSpecialOccassion;
 const n = 25;
@@ -93,7 +92,7 @@ export default function Modals(props) {
         </Modal>
       </div>
       {/* show array of images  */}
-      {imageGallery && [...Array(n)].map((e, i) => <Images className ="Images" url={`https://weddingphotosapp.s3.amazonaws.com/${i+1}.jpg`} key={i} />)
+      {imageGallery && [...Array(n)].map((e, i) => <img className="image-gallery" src={`https://weddingphotosapp.s3.amazonaws.com/${i+1}.jpg`} key={i} alt="" />)
       }
       {/* show notes */}
         {note && 
