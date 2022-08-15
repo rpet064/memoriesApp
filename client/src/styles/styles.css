@@ -8,10 +8,13 @@
 html {
   font-family: 'Roboto', sans-serif;
 }
+
 html, body {
   margin: 0px;
   padding: 0px;
+  background-image: url("https://www.transparenttextures.com/patterns/cream-dust.png");
 } 
+
 
 a, button {
   color: #fff;  
@@ -52,26 +55,35 @@ a, button {
   background-color: #e8054f
 }
 
-/* Menu */
-
-.header {
-  padding-top: 4%;
+#btn-grp .btn{
+  display: inline-block;
+  background-color: #fa26a0;
+  border: none;
 }
 
-.header h3 {
-  padding-top: 1%;
-  padding-bottom: 1%;
+#btn-grp .btn:hover{
+  background-color: #e8054f
+}
+
+#btn-grp .btn svg{
+  width: 1.75rem;
+  height: 1.75rem;
 }
 
 /* imageGallery */
 
+#main-content{
+  display: flex;
+  flex-flow: row wrap;
+  padding: 1%;
+  justify-content: center;
+  align-items: stretch;
+}
+
 .image-gallery {
   width: 27.5rem;
   height: 21rem;
-  display: inline-block;
-  padding: 0.4% 0.25% 0% 0.8%;
   box-shadow: 0 2px 5px #ccc;
-
 }
 
 /* note */

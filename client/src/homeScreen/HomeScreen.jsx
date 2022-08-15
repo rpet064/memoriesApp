@@ -58,21 +58,17 @@ export default function Modals(props) {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="ms-auto">
-            <div>
+            <div id="btn-grp">
+              <Button
+              onClick={() => handleStateChange("imageGallery")}
+            >
+              <FontAwesomeIcon icon="fa-solid fa-photo-film" />
+            </Button>
             <Button
-            variant="danger"
-            size="lg"
-            onClick={() => handleStateChange("imageGallery")}
-          >
-            <FontAwesomeIcon icon="fa-solid fa-photo-film" />
-          </Button>
-          <Button
-            variant="danger"
-            size="lg"
-            onClick={() => handleStateChange("wishList")}
-          >
-            <FontAwesomeIcon icon="fa-solid fa-note-sticky" />
-          </Button>
+              onClick={() => handleStateChange("wishList")}
+            >
+              <FontAwesomeIcon icon="fa-solid fa-note-sticky" />
+            </Button>
             </div>
               </Nav>
             </Navbar.Collapse>
@@ -93,6 +89,7 @@ export default function Modals(props) {
         </Modal>
       </div>
       {/* show array of images  */}
+      <div id="main-content">
       {imageGallery && [...Array(n)].map((e, i) => <img className="image-gallery" src={`https://weddingphotosapp.s3.amazonaws.com/${i+1}.jpg`} key={i} alt="" />)
       }
       {/* show notes */}
@@ -110,6 +107,7 @@ export default function Modals(props) {
                 />
                 )})}
           </ div>}
+        </div>
     </div>
   )
 }
