@@ -4,7 +4,8 @@ import { Button } from "react-bootstrap";
 
 
 export default function Note(props) {
-  function handleClick() {
+  async function handleClick() {
+    await fetch(`/api/delete_note/${props.title}`, { method: 'DELETE' });
     props.onDelete(props.id);
   }
 

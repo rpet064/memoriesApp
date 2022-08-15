@@ -1,15 +1,30 @@
 import CreateArea from "./CreateArea";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import HandleNote from "./Note";
 
 export default function Notes() {
   const [notes, setNotes] = useState([]);
 
-  function addNote(newNote) {
-    setNotes((prevNotes) => {
-      return [...prevNotes, newNote];
-    });
-  }
+  // Set notes to database data
+  useEffect(() => {
+    fetch('/api/notes'
+    ).then(response => response.json()
+    ).then(data => setNotes(data))
+}, [])
+
+function addNote(newNote) {
+  setNotes(prevNotes => {
+    // post new note to db
+    const requestOptions = {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(newNote)
+       };
+       fetch('/api/add_note', requestOptions)
+       .then(response => response.json())
+    return [...prevNotes, newNote];
+  });
+}
 
   function deleteNote(id) {
     setNotes((prevNotes) => {

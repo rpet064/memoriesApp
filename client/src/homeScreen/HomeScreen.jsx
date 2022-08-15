@@ -7,7 +7,7 @@ import HandleNote from "../reminders/HandleNote";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 let specialOccassion = isSpecialOccassion;
-const n = 25;
+const n = 24;
 
 export default function Modals(props) {
   const [show, setShow] = useState(false);
