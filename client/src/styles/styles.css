@@ -178,6 +178,12 @@ footer {
   color: white;
 }
 
+@media only screen and (max-width: 1000px){
+  footer{
+    height: 3.5rem;
+  }
+}
+
 footer svg {
   padding: 1% 0.3% 0% 0.3%;
 }
