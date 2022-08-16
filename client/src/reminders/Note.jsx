@@ -7,9 +7,11 @@ export default function Notes() {
 
   // Set notes to database data
   useEffect(() => {
-    fetch('/api/notes'
+    // fetch('/api/notes'
+    fetch('http://localhost:5000/api/notes'
     ).then(response => response.json()
-    ).then(data => setNotes(data))
+    ).then(data => setNotes(data)
+    ).then(console.log(notes))
 }, [])
 
 function addNote(newNote) {
@@ -20,8 +22,9 @@ function addNote(newNote) {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(newNote)
        };
-       fetch('/api/add_note', requestOptions)
-       .then(response => response.json())
+      //  fetch('/api/add_note', requestOptions)
+        fetch('http://localhost:5000/api/add_note', requestOptions)
+       .then(response => console.log(response.json()))
     return [...prevNotes, newNote];
   });
 }
@@ -36,7 +39,7 @@ function addNote(newNote) {
   return (
     <div>
       <CreateArea onAdd={addNote} />
-      {notes.map((noteItem, index) => {
+      {notes && notes.map((noteItem, index) => {
         return (
           <HandleNote
             key={index}
@@ -45,8 +48,8 @@ function addNote(newNote) {
             content={noteItem.content}
             onDelete={deleteNote}
           />
-        )
+        );
       })}
-    </div>
+      </div>
   )
 }

@@ -5,7 +5,8 @@ import { Button } from "react-bootstrap";
 
 export default function Note(props) {
   async function handleClick() {
-    await fetch(`/api/delete_note/${props.title}`, { method: 'DELETE' });
+    // await fetch(`/api/delete_note/${props.title}`, { method: 'DELETE' });
+    await fetch(`http://localhost:5000/api/delete_note/${props.title}`, { method: 'DELETE' });
     props.onDelete(props.id);
   }
 
@@ -13,7 +14,7 @@ export default function Note(props) {
     <div className="note">
       <h1>{props.title}</h1>
       <p>{props.content}</p>
-      <Button class="btn btn-warning" onClick={handleClick}><FontAwesomeIcon icon="fa-solid fa-trash-can" /></Button>
+      <Button className="btn btn-warning" onClick={handleClick}><FontAwesomeIcon icon="fa-solid fa-trash-can" /></Button>
     </div>
   );
 }

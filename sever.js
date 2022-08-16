@@ -29,20 +29,19 @@ const PORT = process.env.PORT || 5000;
 // 				}
 // 			})
 // 		})
-// 	app.listen(PORT, () => {
+// 	app.liste	n(PORT, () => {
 // 		console.log("Server has started!");
 // 	})
 // };
 // })
 	
 mongoose
-	.connect(mongoString, { useNewUrlParser: true })
-	.then(() => {
-		const app = express()
-		app.use(express.json());
-		app.use("/api", routes) 
-
-		app.listen(PORT, () => {
-			console.log("Server has started!")
+.connect(mongoString, { useNewUrlParser: true })
+.then(() => {
+	const app = express()
+	app.use(express.json());
+	app.use("/api", routes);
+	app.listen(PORT, () => {
+				console.log("Server has started!");
+			})
 		})
-	})

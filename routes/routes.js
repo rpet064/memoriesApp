@@ -2,6 +2,10 @@ const express = require("express");
 const noteModel = require("../models/Note");
 const app = express();
 
+app.get("/", async (req, res) => {
+    res.json('hi');
+});
+
 // get all notes
 app.get("/notes", async (req, res) => {
 	const notes = await noteModel.find({});
