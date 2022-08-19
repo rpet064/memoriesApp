@@ -1,0 +1,193 @@
+@import "bootstrap/dist/css/bootstrap.css";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: 'Roboto', sans-serif;
+}
+
+html, body {
+  margin: 0px;
+  padding: 0px;
+  background-image: url("https://www.transparenttextures.com/patterns/cream-dust.png");
+} 
+
+
+a, button {
+  color: #fff;  
+}
+
+/* bootstrap buttons */
+
+.btn-lg {
+  display: block;
+  margin: 1% auto 1% auto;
+}
+
+.btn-sm {
+  display: block;
+  margin: 1% auto 1% auto;
+}
+
+/* navbar */
+
+.nav {
+  background-color: #fa26a0;
+  margin: auto -16px;
+  padding: 16px 32px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+#brandButton {
+  background-color: #fa26a0;
+  border: none;
+  padding: 10%;
+  border-radius: 10%;
+  font-size: 2rem;
+  font-family: 'Pacifico', cursive;
+}
+
+#brandButton:hover {
+  background-color: #e8054f
+}
+
+#btn-grp .btn{
+  display: inline-block;
+  background-color: #fa26a0;
+  border: none;
+}
+
+#btn-grp .btn:hover{
+  background-color: #e8054f
+}
+
+#btn-grp .btn svg{
+  width: 1.75rem;
+  height: 1.75rem;
+}
+
+/* imageGallery */
+
+#main-content{
+  display: flex;
+  flex-flow: row wrap;
+  padding: 1%;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.image-gallery {
+  width: 27.5rem;
+  height: 21rem;
+  box-shadow: 0 2px 5px #ccc;
+}
+
+/* note */
+
+.note {
+  background: #fff;
+  border-radius: 7px;
+  box-shadow: 0 2px 5px #ccc;
+  padding: 10px;
+  width: 240px;
+  margin: 2% 2% 3% 2%;
+  float: left;
+}
+
+.note .btn{
+  color: white;
+  background-color: #f5ba13;
+}
+
+.note .btn:hover, form.create-note button:hover {
+  background-color: #e5880a;
+}
+
+.note h1 {
+  font-size: 1.1em;
+  margin-bottom: 6px;
+}
+.note p {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.note button {
+  position: relative;
+  float: right;
+  margin-right: 10px;
+  color: #f5ba13;
+  border: none;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  outline: none;
+}
+
+form.create-note {
+  position: relative;
+  width: 480px;
+  margin: 30px auto 20px auto;
+  background: #fff;
+  padding: 15px;
+  border-radius: 7px;
+  box-shadow: 0 1px 5px rgb(138, 137, 137);
+}
+
+form.create-note input,
+form.create-note textarea {
+  width: 100%;
+  border: none;
+  padding: 4px;
+  outline: none;
+  font-size: 1.2em;
+  font-family: inherit;
+  resize: none;
+}
+form.create-note button {
+  position: absolute;
+  right: 18px;
+  bottom: -18px;
+  background: #f5ba13;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  outline: none;
+}
+
+/* footer */
+
+footer {
+  position: fixed;
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
+  background-color: #ee91bc;
+  padding-bottom: 5%;
+  color: white;
+}
+
+@media only screen and (max-width: 1000px){
+  footer{
+    height: 3.5rem;
+  }
+}
+
+footer svg {
+  padding: 1% 0.3% 0% 0.3%;
+}
+
+footer svg:hover{
+  color: #e0e0e0;
+}
