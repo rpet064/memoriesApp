@@ -12,7 +12,7 @@ import { isSpecialOccassion, x } from "./homeScreen/isSpecialOccassion";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 let specialOccassion = isSpecialOccassion;
-const n = 24;
+const n = 20;
 
 
 library.add(faTrashCan, faNoteSticky, faPhotoFilm, faGithub, faLinkedin, faEnvelope)
